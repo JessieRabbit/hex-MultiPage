@@ -1,0 +1,717 @@
+/* reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* layout */
+body {
+    font-family: Microsoft JhengHei;
+}
+
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.headerIndex,
+.headerCourse,
+.headerQa {
+    /* fix: 1.headerIndex, .headerCourse, .headerQa 不需要設定 width，因為 div 是區塊元素會自適應父元素寬度 */
+    /* width: 1024px; */
+    height: 560px;
+}
+
+.headerIndex {
+    background: url(../images/bg.jpg) no-repeat;
+}
+
+.headerCourse {
+    background: url(../images/bg2.jpg) no-repeat;
+}
+
+.headerQa {
+    background: url(../images/bg3.jpg) no-repeat;
+}
+
+.headerIndex .opacityBg,
+.headerCourse .opacityBg,
+.headerQa .opacityBg {
+    background-color: rgba(74, 74, 74, 0.5);
+}
+
+.headerIndex .logo,
+.headerCourse .logo,
+.headerQa .logo {
+    float: left;
+    margin-left: 43px;
+    margin-top: 10px;
+}
+
+.headerIndex .logo a,
+.headerCourse .logo a,
+.headerQa .logo a {
+    display: block;
+    background-image: url(../images/header_logo.png);
+    width: 181px;
+    height: 52px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.headerIndex .menu,
+.headerCourse .menu,
+.headerQa .menu {
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.headerIndex .menu li,
+.headerCourse .menu li,
+.headerQa .menu li {
+    float: left;
+    padding-right: 15px;
+}
+
+.headerIndex .menu a,
+.headerCourse .menu a,
+.headerQa .menu a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.headerIndex .menu a:hover,
+.headerCourse .menu a:hover,
+.headerQa .menu a:hover {
+    color: #00cc99;
+    border-bottom: 4px solid #00cc99;
+}
+
+.headerIndex,
+.headerCourse,
+.headerQa {
+    position: relative;
+}
+
+.headerIndex h2,
+.headerCourse h2 {
+    color: #00cc99;
+    font-size: 48px;
+    line-height: 1.5;
+    /* fix: 3..headerIndex h2, .headerCourse h2, .headerQa h2 及 .register 不建議用 margin 來推，可以相對於父元素來做定位 */
+    /* margin-top: 100px;
+    margin-left: 42px; */
+    position: absolute;
+    top: 160px;
+    left: 40px;
+}
+
+/* fix */
+.headerQa h2 {
+    color: #00cc99;
+    font-size: 48px;
+    line-height: 1.5;
+    position: absolute;
+    top: 160px;
+    left: 355px;
+}
+
+.headerCourse .courseTitle,
+.headerQa .qaTitle {
+    font-size: 24px;
+}
+
+.headerQa .qaTitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.headerIndex .register,
+.headerCourse .register {
+    background-color: #00cc99;
+    color: #ffffff;
+    width: 224px;
+    font-size: 20px;
+    border-radius: 3%;
+    /* cursor: pointer; */
+    text-align: center;
+    /* margin-left: 42px;
+    margin-top: 50px; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    text-decoration: none;
+}
+
+.headerIndex .register:after,
+.headerCourse .register:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f061";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    margin-left: 30px;
+}
+
+.headerIndex .register:hover,
+.headerCourse .register:hover {
+    background-color: #009424;
+}
+
+.headerQa .search {
+    position: relative;
+    text-align: center;
+    margin-top: 265px;
+}
+
+.headerQa input {
+    border-radius: 2%;
+    width: 600px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+}
+
+.headerQa .search i {
+    position: absolute;
+    top: 10px;
+    right: 230px;
+    font-size: 25px;
+}
+
+.footer {
+    background: #323228;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer .logo {
+    float: left;
+    margin-left: 43px;
+}
+
+.footer .menu a.fb {
+    display: block;
+    background-image: url(../images/fb_logo.png);
+    width: 20px;
+    height: 18px;
+}
+
+.footer .menu {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.footer .menu li {
+    float: left;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 5px 5px;
+    margin-right: 23px;
+}
+
+.footer .menu a.twitter {
+    display: block;
+    background-image: url(../images/twitter_logo.png);
+    width: 20px;
+    height: 18px;
+}
+
+.footer .menu a.ig {
+    display: block;
+    background-image: url(../images/ig_logo.png);
+    width: 20px;
+    height: 18px;
+}
+
+.footer p {
+    color: #ffffff;
+    margin-left: 30px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* 獨立 */
+span.whiteColor {
+    color: #ffffff;
+    font-size: 48px;
+}
+
+/* 首頁content */
+.contentIndex {
+    padding: 32px;
+}
+
+.contentIndex .productList .intro {
+    float: left;
+    width: 300px;
+    box-shadow: 0px 5px 5px #dbdbdb;
+    margin-right: 20px;
+    padding-bottom: 20PX;
+    text-align: center;
+}
+
+.contentIndex h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.contentIndex .productList p {
+    text-align: left;
+    font-size: 15px;
+    padding-right: 27px;
+    padding-left: 27px;
+    line-height: 1.5;
+}
+
+.tableSection {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tableStyle th,
+.tableStyle td {
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    padding-top: 15px;
+    padding-left: 50px;
+    padding-bottom: 15px;
+    padding-right: 90px;
+    font-size: 15px;
+}
+
+.tableStyle th {
+    font-weight: bold;
+    background: #f7f7f7;
+}
+
+.pointColor {
+    color: #42b392;
+    font-weight: bold;
+}
+
+.tableSection h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section {
+    background: #ebebeb;
+    color: #000000;
+    padding-bottom: 60px;
+    padding-top: 140px;
+    padding-left: 43px;
+    padding-right: 43px;
+}
+
+.section form h2 {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 100px;
+    line-height: 1.5;
+}
+
+form h2.qaTitle {
+    margin-right: 125px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    display: block;
+    width: 455px;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.section input[type="submit"] {
+    float: right;
+    display: block;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 40px;
+    background: #00cc99;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.section input[type="submit"]:active {
+    background: #007a5b;
+}
+
+.section input[type="submit"]:hover {
+    background: #009424;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.feature h2,
+.special h2,
+.outline h2,
+.description h2,
+.pay h2,
+.refund h2 {
+    float: left;
+    font-size: 36px;
+    font-weight: 800;
+    color: #00cc99;
+    margin-right: 10px;
+}
+
+.feature .descript,
+.special .descript,
+.outline .descript,
+.description .descript,
+.pay .descript,
+.refund .descript {
+    float: left;
+    color: #9b9b9b;
+    padding-top: 17px;
+    font-size: 20px;
+}
+
+.feature .more {
+    float: right;
+    background-color: #ffffff;
+    color: #00cc99;
+    font-size: 16px;
+    border-radius: 5%;
+    border: 2px solid #00cc99;
+    /* cursor: pointer; */
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.feature .more:hover {
+    background-color: #009424;
+}
+
+/* 課程content */
+
+.contentCourse {
+    padding: 60px 200px;
+}
+
+.intro {
+    margin-bottom: 57px;
+}
+
+.intro .photo,
+.intro .photoTitle {
+    float: left;
+}
+
+.intro .photo {
+    margin-right: 40px;
+}
+
+.intro .photoTitle {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.intro .listItem {
+    float: right;
+    margin-top: 50px;
+}
+
+.intro .listItem li {
+    list-style: disc;
+    color: #9b9b9b;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+.special {
+    margin-bottom: 60px;
+}
+
+.special ol {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.special ol li {
+    list-style-type: decimal;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.outline table {
+    width: 620px;
+    margin-top: 30px;
+}
+
+.outline tr td {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.outline tr:nth-child(odd) {
+    background-color: #ebebeb;
+    font-weight: bold;
+}
+
+.sectionCourse {
+    background: #ebebeb;
+    color: #000000;
+    padding: 150px 200px;
+}
+
+.sectionCourse h2 {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* fix */
+.sectionCourse .register {
+    float: right;
+    margin-left: 0px;
+    margin-top: 30px;
+    background-color: #00cc99;
+    color: #ffffff;
+    width: 224px;
+    font-size: 20px;
+    border-radius: 3%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+}
+
+.sectionCourse .register:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f061";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    margin-left: 30px;
+}
+
+.sectionCourse .register:hover {
+    background-color: #009424;
+}
+
+/* 問答content */
+.contentQa {
+    padding: 60px 120px;
+}
+
+.contentQa h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.contentQa p {
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+.contentQa .description,
+.contentQa .pay {
+    margin-bottom: 60px;
+}
+
+.pay ol,
+.refund ul {
+    padding-top: 10px;
+    padding-left: 50px;
+    color: #9b9b9b;
+}
+
+.pay ol li {
+    list-style-type: decimal;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.refund ul li {
+    list-style-type: disc;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.contentQa .helpRefund {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.section form textarea {
+    width: 450px;
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 455px;
+    margin-right: 40px;
+    padding-left: 10px;
+    resize: none;
+}
